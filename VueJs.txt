@@ -1,0 +1,3 @@
+VueJs é um framework JavaScript utilizado para criar interfaces interativas e reativas
+JavaScript manipula o Document Object Model (DOM)
+Build user interfaces from smaller building blocks is called composition

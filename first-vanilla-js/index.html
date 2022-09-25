@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <title>Vanilla JS</title>
+</head>
+<body>
+    <main class="container-fluid" id="app">
+        <section class="card shadow mt-5 col-lg-6 offset-lg-3">
+            <div class="card-header text-center">
+                <h1>Add an Goal</h1>
+            </div>
+            <div class="card-body">
+                <form action="" id="goal-form">
+                    <div class="form-group">
+                        <label for="description" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="goal-description" v-model="goalDescription">
+                    </div>
+                    <div class="m-3 text-center">
+                        <button class="btn btn-success" v-on:click="addGoal">Save</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="card shadow mt-5 col-lg-6 offset-lg-3">
+            <div class="card-header text-center">
+                <h1>Goals List</h1>
+            </div>
+            <div class="card-body">
+                <ul class="list-group" id="goals-list">
+                   <li class="list-group-item" v-for="goal in goals">{{goal}}</li>
+                </ul>
+            </div>
+            <div class="card-footer text-muted text-center">
+                <a href="#" id="reset-goals-list"  v-on:click="resetGoals">Reset List</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
